@@ -13,7 +13,7 @@ print(f"loaded {len(df)} rated entries for analysis.")
 df["genres_list"] = df["genres"].str.split("|")
 df_exploded = df.explode("genres_list")
 
-# aggregagte stats per individual genre
+# aggregate stats per individual genre
 genre_stats = (
     df_exploded.groupby("genres_list")
     .agg(
@@ -57,9 +57,9 @@ plt.xlim(5.5, 7.5) # focus on the range where most genres fall
 
 # save the visualization directly to the repository 
 plt.tight_layout()
-plt.savefig("genre_rating_anaylsis.png", dpi=300)
+plt.savefig("genre_rating_analysis.png", dpi=300)
 print("\nanalysis complete. visualization saved to 'genre_rating_analysis.png'.")
 
-# calculate overall correlation to complete the analaysis 
+# calculate overall correlation to complete the analysis 
 correlation = df["members"].corr(df['score'])
 print(f"\npopularity-to-score correlation coefficient: {correlation:.2f}")
