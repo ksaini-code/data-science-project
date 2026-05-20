@@ -1,0 +1,14 @@
+loaded 19892 rated entries for analysis.
+loaded 19892 rated entries for analysis.
+
+Top 5 Highest Rated Genres on Average:
+      genres_list  average_score
+3   Award Winning       7.324130
+20       Suspense       7.020024
+14        Mystery       6.995107
+6           Drama       6.900593
+15        Romance       6.872563
+
+analysis complete. visualization saved to 'genre_rating_analysis.png'.
+
+popularity-to-score correlation coefficient: 0.37

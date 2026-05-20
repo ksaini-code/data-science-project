@@ -1,0 +1,2 @@
+Original dataset shape: (30075, 29)
+data cleaning complete. cleaned dataset saved to 'data/anime_dataset_cleaned.csv'.
