@@ -9,6 +9,17 @@ import seaborn as sns
 df = pd.read_csv("data/anime_dataset_cleaned.csv")
 print(f"loaded {len(df)} rated entries for analysis.")
 
+import os 
+
+# automatically find the file where analysis.py is located and load the cleaned dataset from there
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+data_path = os.path.join(BASE_DIR, "data/anime_dataset_cleaned.csv")
+
+df = pd.read_csv(data_path)
+print(f"loaded {len(df)} rated entries for analysis.")
+
+
 # split genres string and explode to group individual genres fairly
 df["genres_list"] = df["genres"].str.split("|")
 df_exploded = df.explode("genres_list")

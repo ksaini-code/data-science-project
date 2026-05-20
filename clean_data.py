@@ -1,7 +1,5 @@
-try:
-    import pandas as pd
-except ModuleNotFoundError:
-    raise SystemExit("Pandas is required to run this script. Install it with `pip install pandas`.")
+import pandas as pd
+
 
 df = pd.read_csv("data/anime_dataset.csv")
 print(f"Original dataset shape: {df.shape}")
